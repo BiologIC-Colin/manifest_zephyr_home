@@ -1,0 +1,49 @@
+manifest:
+#  self:
+#    path: example-application
+#    west-commands: scripts/west-commands.yml
+
+  remotes:
+    - name: zephyrproject-rtos
+      url-base: https://github.com/zephyrproject-rtos
+
+    - name: cmsis-svd
+      url-base: https://github.com/cmsis-svd
+      
+    - name: bl
+      url-base: git@github.com:BiologIC-Colin
+      
+  projects:
+    - name: zephyr
+      remote: zephyrproject-rtos
+      revision: v3.6.0
+      import:
+         name-allowlist:
+            - cmsis
+            - hal_rpi_pico
+            - mcuboot
+            - picolibc
+            - libc3
+      
+    - name: cmsis-svd-data
+      remote: cmsis-svd
+      revision: main
+
+# Multiple apps can be placed in the workspace/apps folder. Bit like zephyr/samples.
+
+    - name: dotstar_zephyr_app
+      remote: bl
+      revision: master
+      path: apps/dotstar      
+
+# Repositories for custom boards and drivers.
+
+    - name: boards_zephyr_home
+      remote: bl
+      revision: master
+      path: modules/boards
+
+    - name: drivers_zephyr_home
+      remote: bl
+      revision: master
+      path: modules/drivers

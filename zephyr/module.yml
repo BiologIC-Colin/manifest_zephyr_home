@@ -1,0 +1,4 @@
+name: manifest_zephyr
+build:
+  cmake: .
+  kconfig: ./Kconfig
