@@ -20,6 +20,7 @@ manifest:
       import:
          name-allowlist:
             - cmsis
+            - hal_ambiq
             - hal_rpi_pico
             - mcuboot
             - picolibc
