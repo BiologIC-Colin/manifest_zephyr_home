@@ -40,7 +40,14 @@ manifest:
       revision: master
       path: apps/dotstar      
 
-# Repositories for custom boards and drivers.
+    - name: picowifi
+      remote: bl
+      revision: master
+      path: apps/picowifi
+
+
+
+    # Repositories for custom boards and drivers.
 
     - name: boards_zephyr_home
       remote: bl
