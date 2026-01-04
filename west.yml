@@ -33,6 +33,11 @@ manifest:
       remote: cmsis-svd
       revision: main
 
+    - name: hal_rpi_pico
+      remote: zephyrproject-rtos
+      revision: 562b41e
+      path: modules/hal/raspberrypi
+
 # Multiple apps can be placed in the workspace/apps folder. Bit like zephyr/samples.
 
 #    - name: dotstar_zephyr_app
