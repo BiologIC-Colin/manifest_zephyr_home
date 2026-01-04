@@ -45,7 +45,10 @@ manifest:
       revision: master
       path: apps/picowifi
 
-
+    - name: pico_camera_slider
+      remote: bl
+      revision: master
+      path: apps/slider
 
     # Repositories for custom boards and drivers.
 
