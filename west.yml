@@ -35,10 +35,10 @@ manifest:
 
 # Multiple apps can be placed in the workspace/apps folder. Bit like zephyr/samples.
 
-    - name: dotstar_zephyr_app
-      remote: bl
-      revision: master
-      path: apps/dotstar      
+#    - name: dotstar_zephyr_app
+#      remote: bl
+#      revision: master
+#      path: apps/dotstar
 
     - name: picowifi
       remote: bl
