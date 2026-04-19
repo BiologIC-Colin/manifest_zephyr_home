@@ -1,6 +1,6 @@
 manifest:
-#  self:
-#    path: example-application
+  self:
+    path: mainRoot
 #    west-commands: scripts/west-commands.yml
 
   remotes:
@@ -12,57 +12,55 @@ manifest:
       
     - name: bl
       url-base: git@github.com:BiologIC-Colin
-      
+
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      revision: main
+      revision: v4.4.0
       import:
          name-allowlist:
             - cmsis
-            - cmsis_6
-            - cmsis-dsp
-            - hal_ambiq
+            - cmis_6
+            - cmis-dsp
+#            - hal_nxp
+            - hal_stm32
             - hal_rpi_pico
-            - hal_infineon
             - mcuboot
             - picolibc
             - libc3
+            - loramac-node
+            - segger
       
     - name: cmsis-svd-data
       remote: cmsis-svd
       revision: main
-
-    - name: hal_rpi_pico
-      remote: zephyrproject-rtos
-      revision: 562b41e
-      path: modules/hal/raspberrypi
-
-# Multiple apps can be placed in the workspace/apps folder. Bit like zephyr/samples.
-
-#    - name: dotstar_zephyr_app
-#      remote: bl
-#      revision: master
-#      path: apps/dotstar
+      
+    - name: loraScarer
+      remote: bl
+      revision: master
+      path: apps/loraScarer
 
     - name: picowifi
       remote: bl
       revision: master
       path: apps/picowifi
 
-    - name: pico_camera_slider
-      remote: bl
-      revision: master
-      path: apps/slider
+    # - name: pico_camera_slider
+    #   remote: bl
+    #   revision: master
+    #   path: apps/slider
 
-    # Repositories for custom boards and drivers.
-
-    - name: boards_zephyr_home
+    - name: boards_zephyr
       remote: bl
       revision: master
       path: modules/boards
 
-    - name: drivers_zephyr_home
+    - name: drivers_zephyr
       remote: bl
       revision: master
       path: modules/drivers
+      
+    - name: libs_zephyr
+      remote: bl
+      revision: master
+      path: modules/lib
