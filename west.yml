@@ -43,14 +43,14 @@ manifest:
     - name: boards_zephyr_home
       remote: cb
       revision: master
-      path: modules/boards
+      path: boards
 
     - name: drivers_zephyr_home
       remote: cb
       revision: master
-      path: modules/drivers
+      path: drivers
       
     - name: libs_zephyr_home
       remote: cb
       revision: master
-      path: modules/lib
+      path: libs
