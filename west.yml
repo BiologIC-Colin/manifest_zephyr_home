@@ -10,57 +10,47 @@ manifest:
     - name: cmsis-svd
       url-base: https://github.com/cmsis-svd
       
-    - name: bl
+    - name: cb
       url-base: git@github.com:BiologIC-Colin
 
   projects:
     - name: zephyr
       remote: zephyrproject-rtos
-      revision: v4.4.0
+      revision: v4.4.2
       import:
          name-allowlist:
             - cmsis
-            - cmis_6
-            - cmis-dsp
-#            - hal_nxp
-            - hal_stm32
-            - hal_rpi_pico
+            - cmsis_6
             - mcuboot
+            - zcbor
+            - mbedtls
             - picolibc
             - libc3
-            - loramac-node
+            - hal_stm32
+            - hal_rpi_pico
+            - cmsis-dsp
             - segger
       
     - name: cmsis-svd-data
       remote: cmsis-svd
       revision: main
       
-    - name: loraScarer
-      remote: bl
+    - name: apps_zephyr_home
+      remote: cb
       revision: master
-      path: apps/loraScarer
+      path: apps
 
-    - name: picowifi
-      remote: bl
-      revision: master
-      path: apps/picowifi
-
-    # - name: pico_camera_slider
-    #   remote: bl
-    #   revision: master
-    #   path: apps/slider
-
-    - name: boards_zephyr
-      remote: bl
+    - name: boards_zephyr_home
+      remote: cb
       revision: master
       path: modules/boards
 
-    - name: drivers_zephyr
-      remote: bl
+    - name: drivers_zephyr_home
+      remote: cb
       revision: master
       path: modules/drivers
       
-    - name: libs_zephyr
-      remote: bl
+    - name: libs_zephyr_home
+      remote: cb
       revision: master
       path: modules/lib
