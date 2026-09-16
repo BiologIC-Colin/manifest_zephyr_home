@@ -28,6 +28,7 @@ manifest:
             - libc3
             - hal_stm32
             - hal_rpi_pico
+            - hal_espressif
             - cmsis-dsp
             - segger
       
