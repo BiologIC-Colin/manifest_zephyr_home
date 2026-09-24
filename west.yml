@@ -24,11 +24,13 @@ manifest:
             - mcuboot
             - zcbor
             - mbedtls
+            - tf-psa-crypto
             - picolibc
             - libc3
             - hal_stm32
             - hal_rpi_pico
             - hal_espressif
+            - littlefs
             - cmsis-dsp
             - segger
       
